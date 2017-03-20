@@ -14,7 +14,7 @@ def calc_assets(portfolio, days):
     for _ in range(days):
         seed_a = result * portfolio
         seed_b = result - seed_a
-        result = rnd.choice([2.0 * seed_a, 2.0 * seed_b], p=[A, 1.0 - A])
+        result = 2 * rnd.choice([seed_a, seed_b], p=[A, 1.0 - A])
     return result
 
 
